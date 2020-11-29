@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>1001</title>
+<!--   <link rel="preconnect" href="https://fonts.gstatic.com">
+ -->
+  <!-- jQuery необходим для Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Сжатый CSS для bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Дополнение к теме bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Шрифт Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+
+  <div class="form__container">
+    <div class="form__title">Подобрать тур по лучшей цене</div>
+
+      <div class="form__wrapper-flex">
+
+          <div class="form__block">
+
+            <div class="form__manager-content-wrapper">
+              <div class="form__manager-content">
+                <div class="form__manager-content-img">
+                  <img src="img/manager.jpg" width="110" height="110">
+                </div>
+                <div class="form__manager-content-text">
+                  <div class="form__manager-content-title">Хотите подобрать тур?</div>
+                  <div class="form__manager-content-subtitle">Лучшие предложения по оптимальным ценам</div>
+                  <div class="form__manager-content-info">за 3 шага</div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="form__steps-btn visually-hidden">
+              <button class="form__step-btn form__step-btn-1 form__step-success" tabindex="0"><span class="form__step-number">1</span></button>
+              <button class="form__step-btn form__step-btn-2" tabindex="0"><span class="form__step-number">2</span></button>
+              <button class="form__step-btn form__step-btn-3" tabindex="0"><span class="form__step-number">3</span></button>
+            </div>
+
+
+
+            <form class="form" id="form" action="#" autocomplete="off">
+
+
+              <fieldset class="form__fieldset form__step-1">
+
+                <div class="form__field-title">Где вы хотите отдохнуть?</div>
+
+                <label class="form__field-label" for="countries">Выберите страну</label>
+                <div class="form__field-wrapper">
+                  <select class="form__field" id="countries" class="form__step-1-country" name="country" required>
+                      <option value="Выберите страну" selected>Выберите страну</option>
+                    <!-- <option value="">Аргентина</option>
+                    <option value="">Бразилия</option>
+                    <option value="">Латвия</option> -->
+                  </select>
+                  <button class="form__step-button form__step-1-button" tabindex="0">Далее</button>
+                </div>
+                <span class="form__field-error">Укажите страну</span>
+
+              </fieldset>
+
+
+
+              <fieldset class="form__fieldset form__step-2">
+                <div class="form__field-title">Какая дата вылета Вам будет удобна?</div>
+                <label class="form__field-label" for="date">Выберите дату</label>
+                <div class="form__field-wrapper">
+                  <input class="form__field" id="calendar" type="date" name="date" value="" required>
+                  <button class="form__step-button form__step-2-button"tabindex="0">Далее</button>
+                </div>
+                <span class="form__field-error">Выберите дату</span>
+              </fieldset>
+
+
+
+              <fieldset class="form__fieldset form__step-3">
+                <div class="form__field-title">Пожалуйста, оставьте Ваши контактные данные для того, чтобы мы могли связаться с Вами.</div>
+
+
+                <div class="form__contact-office-wrapper">
+                  <div class="form__contact">
+                    <label class="form__field-label" for="name">Ваше имя</label>
+                    <input class="form__field" id="name" type="text" name="name" placeholder="Ваше имя" required>
+                    <span class="form__field-error">Введите имя</span>
+                    <label class="form__field-label" for="phone">Ваш телефон</label>
+                    <input class="form__field" id="phone" type="tel" name="phone" placeholder="+7(___)___-__-__" required>
+                    <span class="form__field-error">Введите телефон</span>
+                    <label class="form__field-label" for="email">Ваш email</label>
+                    <input class="form__field" id="email" type="email" name="email" placeholder="Ваш email" required>
+                    <span class="form__field-error">Введите email</span>
+                  </div>
+
+                  <div class="form__office">
+                    <div class="form__field-title">Выберите удобный для вас офис:</div>
+                    <label class="form__field-label" for="city">Город</label>
+                    <select class="form__field" id="citys" name="city" class="city" required>
+                      <option>Выберете город</option>
+                      <option>Москва</option>
+                      <option>Екатеринбург</option>
+                      <option>Урюпинск</option>
+                    </select>
+                    <span class="form__field-error">Укажите город</span>
+                    <label class="form__field-label" for="office">Офис</label>
+                    <select class="form__field" id="office" name="office" required>
+                      <option>Выберете офис</option>
+                      <option>улица</option>
+                      <option>улица</option>
+                      <option>улица</option>
+                    </select>
+                    <span class="form__field-error">Укажите офис</span>
+                  </div>
+                </div>
+
+
+
+
+              </fieldset>
+
+              <button class="form__button form__button-submit">Получить лучшие предложения</button>
+
+            </form>
+          </div>
+
+
+
+          <div class="form__description">
+            <div class="form__description-block">
+              <span class="form__description-title">Как это работает?</span>
+              <ul class="form__description-list">
+                <li class="form__description-item">
+                  <img class="form__description-item-img" src="img/example.svg" width="30" height="30">
+                  <span class="form__description-item-text">Вы отправляете заявку на подбор тура</span>
+                </li>
+                <li class="form__description-item">
+                  <img class="form__description-item-img" src="img/example.svg" width="30" height="30">
+                  <span class="form__description-item-text">Наши специалисты находят для Вас лучшие предложения</span></li>
+                <li class="form__description-item">
+                  <img class="form__description-item-img" src="img/example.svg" width="30" height="30">
+                  <span class="form__description-item-text">Вам остается только выбрать тур</span>
+                </li>
+              </ul>
+            </div>
+            <div class="form__description-block">
+              <span class="form__description-title">Это удобно</span>
+              <ul class="form__description-list">
+                <li class="form__description-item">
+                  <img class="form__description-item-img" src="img/example.svg" width="30" height="30">
+                  <span class="form__description-item-text">Вы экономите время и силы</span>
+                </li>
+                <li class="form__description-item">
+                  <img class="form__description-item-img" src="img/example.svg" width="30" height="30">
+                  <span class="form__description-item-text">1001 Тур - крупнейшая сеть туристических агентств</span>
+                </li>
+                <li class="form__description-item">
+                  <img class="form__description-item-img" src="img/example.svg" width="30" height="30">
+                  <span class="form__description-item-text">Услуга бесплатна!</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+      </div>
+
+
+  </div>
+
+
+
+  <!-- Сжатый JavaScript для bootstrap-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+  <script src="js/createOption.js"></script>
+  <script src="js/toggleForm.js"></script>
+
+
+
+  <script src="js/validationForm.js"></script>
+</body>
+
+</html>
