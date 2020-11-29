@@ -254,12 +254,6 @@
   outline: none;
 }
 
-option {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 ::-webkit-calendar-picker-indicator {
   color: transparent;
   opacity: 1;
@@ -283,11 +277,13 @@ option {
   background-repeat: no-repeat;
   background-position: 99% 50%;
   background-size: 40px 40px;
+  padding-right: 40px;
 }
 
 .form__field[name="country"],
 .form__field[name="date"] {
   margin-bottom: 0;
+  min-width: 40px;
 }
 
 .form__field-error {

@@ -113,10 +113,5 @@
     formFieldCalendar.addEventListener('change', fieldDateChangeHandler);
     formStepBtn3.addEventListener('click', fieldDateChangeHandler);
     formButton2.addEventListener('click', fieldDateChangeHandler);
-    // formFieldCalendarValue = moment().format('DD.MM.YYYY');
-    // console.log(formFieldCalendarValue);
-
-
-
 
 })();
